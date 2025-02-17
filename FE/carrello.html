@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'angolo di Rita | Homemade products</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/body.css">
+    <link rel="stylesheet" href="./styles/carrello.css">
+    
+    <!-- REACT -->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    
+    <header id="header">
+        <div id="React-Logo"></div>
+        <nav id="React-Nav-Menu"></nav>
+        <nav id="React-Nav-Icon"></nav>
+    </header>
+
+    <!-- CARRELLO -->
+
+    <body>
+        <section id="carrello">
+            <div class="carrello-container">
+                <h2>Carrello</h2>
+                <p1>Compila i campi sottostanti per completare il tuo ordine. Nessun metodo di pagamento è richiesto.</p1>
+    
+                <form id="carrello-form">
+                    <div class="form-group">
+                        <label for="name">Nome completo</label>
+                        <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="address">Indirizzo di consegna</label>
+                        <input type="text" id="address" name="address" placeholder="Inserisci il tuo indirizzo" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="notes">Note aggiuntive</label>
+                        <textarea id="notes" name="notes" placeholder="Inserisci eventuali note..." ></textarea>
+                    </div>
+    
+                    <button type="button" onclick="checkout()">Invia Ordine</button>
+                </form>
+            </div>
+        </section>
+    </body>
+    
+    <!-- FOOTER -->
+    
+    <footer id="footer">
+        <div class="top">
+            <div class="left-footer">
+                <h3>About Us</h3>
+                <div id="React-About"></div>
+                <h3>Follow Us</h3>
+                <nav id="React-Nav-Social"></nav>
+            </div>
+            <div class="right-footer">
+                <h3>Quick Links</h3>
+                <nav id="React-Nav-Site"></nav>
+            </div>
+        </div>
+        <div id="React-Footer-Lower"></div>
+    </footer>
+    
+    <!-- SCRIPT -->
+    
+    <script type="text/babel" src="./src/components/logo.js"></script>
+    <script type="text/babel" src="./src/components/nav-menu.js"></script>
+    <script type="text/babel" src="./src/components/nav-icon.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+    <script type="text/babel" src="./src/components/footer-lower.js"></script>
+    <script type="text/babel" src="./src/components/about.js"></script>
+    <script type="text/babel" src="./src/components/nav-site.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+    <script src="./scripts/carrello.js"></script>
+
+    </body>
+</html>

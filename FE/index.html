@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'angolo di Rita | Homemade products</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/body.css">
+    
+    <!-- REACT -->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    
+    <header id="header">
+        <div id="React-Logo"></div>
+        <nav id="React-Nav-Menu"></nav>
+        <nav id="React-Nav-Icon"></nav>
+    </header>
+    
+    <!-- MAIN -->
+    
+    <div id="box">
+        <div id="image">
+            <img src="./assets/imgs/love-uncinetto.png" alt="immagine principale">
+        </div>
+        <div id="text">
+            <h2>L'ANGOLO DI RITA ♥ HAND MADE</h2>
+            <p>Made in Italy with Love.</p>
+            <a href="prodotti.html" class="product-button">
+                <button>Vai allo shop</button>
+            </a>       
+        </div>
+    </div>
+    
+    <div id="intro-text">
+        <h2>LE NOSTRE NOVITA'!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SE TI ISCRIVI ALLA NOSTRA NEWSLETTER QUI SOTTO RICEVERAI IL 10% DI SCONTO</h2>
+    </div>
+
+    <p1>Esplora le nostre novità</p1>
+
+    <div id="box2">
+        <div class="image-wrapper">
+            <a href="prodotti.html">
+                <img src="./assets/imgs/cappellino.png" alt="icona1" data-tooltip="Informazioni su cappellino">
+            </a>
+            <div class="tooltip">cappellino personalizzato</div>
+        </div>    
+        <div class="image-wrapper">
+            <a href="prodotti.html">
+                <img src="./assets/imgs/cardigan.png" alt="icona2" data-tooltip="nuovi cardigan">
+            </a>
+            <div class="tooltip">ultimi cardigan</div>
+        </div>
+        <div class="image-wrapper">
+            <a href="prodotti.html">
+                <img src="./assets/imgs/scarpette.png" alt="icona3" data-tooltip="prime scarpette">
+            </a>
+            <div class="tooltip">prime scarpette</div>
+        </div>
+    </div>
+    
+    <div class="test">
+        <h3 class="separetor">✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁ </h3> 
+        <p> Immagina una piccola realtà artigianale, nata con il cuore e la passione per il mondo dei bambini,
+            che si è affacciata timidamente al mondo del lavoro con un sogno grande: creare vestiti unici, fatti a mano, con amore, per i più piccoli.
+            Ogni singolo capo è lavorato con l'uncinetto, una tecnica che permette di creare fantasie e dettagli personalizzati che difficilmente si trovano nei prodotti la scelta dell'uncinetto non è casuale:
+            è un'arte che richiede tempo, dedizione e una buona dose di creatività , e il risultato finale è un prodotto che trasmette calore, comfort e un senso di UNICITA'.
+        </p>  
+        <h3 class="separetor">✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁✃✁ </h3> 
+    </div>
+
+    <p1>BEST SELLERS</p1>
+    
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="./assets/imgs/cappottino.webp" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="./assets/imgs/bavaglino1.webp" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="./assets/imgs/vestitino.webp" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="./assets/imgs/cappellino1.webp" alt="Image 4">
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter-box">
+        <h2>ISCRIVITI ALLA NOSTRA NEWSLETTER</h2>
+        <p>Rimani aggiornato con le nostre ultime novità e offerte speciali.</p>
+        <form action="http://localhost:4000/users/iscrizione-newsletter" method="post">
+            <input type="email" name="email" placeholder="Inserisci la tua email" required>
+            <button type="submit">Iscriviti</button>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    
+    <footer id="footer">
+        <div class="top">
+            <div class="left-footer">
+                <h3>About Us</h3>
+                <div id="React-About"></div>
+                <h3>Follow Us</h3>
+                <nav id="React-Nav-Social"></nav>
+            </div>
+            <div class="right-footer">
+                <h3>Quick Links</h3>
+                <nav id="React-Nav-Site"></nav>
+            </div>
+        </div>
+        <div id="React-Footer-Lower"></div>
+    </footer>
+    
+    <!-- SCRIPT -->
+    
+    <script type="text/babel" src="./src/components/logo.js"></script>
+    <script type="text/babel" src="./src/components/nav-menu.js"></script>
+    <script type="text/babel" src="./src/components/nav-icon.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+    <script type="text/babel" src="./src/components/footer-lower.js"></script>
+    <script type="text/babel" src="./src/components/about.js"></script>
+    <script type="text/babel" src="./src/components/nav-site.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+
+    </body>
+</html>

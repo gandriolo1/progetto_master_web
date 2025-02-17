@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'angolo di Rita | Homemade products</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./styles/contatti.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/body.css">
+    
+    <!-- REACT -->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    
+    <header id="header">
+        <div id="React-Logo"></div>
+        <nav id="React-Nav-Menu"></nav>
+        <nav id="React-Nav-Icon"></nav>
+    </header>
+
+     <!-- SEZIONE CONTATTI -->
+
+    <section id="contatti">
+
+        <div class="contatti-container">
+            <h2>Contattaci</h2>
+            <p1>Hai domande o richieste? Compila il modulo sottostante per metterti in contatto con noi.</p1>
+
+            <div class="contact-info">
+                <h3>Informazioni di contatto</h3>
+                <ul>
+                    <li><strong>Email:</strong> info@angolodirita.it</li>
+                    <li><strong>Telefono:</strong> +39 123 456 789</li>
+                    <li><strong>Indirizzo:</strong> Via Roma, 123, 00100 Roma, Italia</li>
+                </ul>
+            </div>
+
+            <form action="#" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio">Messaggio:</label>
+                    <textarea id="messaggio" name="messaggio" required></textarea>
+                </div>
+
+                <button type="submit">Invia Messaggio</button>
+            </form>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+    
+<footer id="footer">
+    <div class="top">
+        <div class="left-footer">
+            <h3>About Us</h3>
+            <div id="React-About"></div>
+            <h3>Follow Us</h3>
+            <nav id="React-Nav-Social"></nav>
+        </div>
+        <div class="right-footer">
+            <h3>Quick Links</h3>
+            <nav id="React-Nav-Site"></nav>
+        </div>
+    </div>
+    <div id="React-Footer-Lower"></div>
+</footer>
+
+<!-- SCRIPT -->
+
+<script type="text/babel" src="./src/components/logo.js"></script>
+<script type="text/babel" src="./src/components/nav-menu.js"></script>
+<script type="text/babel" src="./src/components/nav-icon.js"></script>
+<script type="text/babel" src="./src/components/nav-social.js"></script>
+<script type="text/babel" src="./src/components/footer-lower.js"></script>
+<script type="text/babel" src="./src/components/about.js"></script>
+<script type="text/babel" src="./src/components/nav-site.js"></script>
+<script type="text/babel" src="./src/components/nav-social.js"></script>
+
+</body>
+</html>

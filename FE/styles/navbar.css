@@ -1,0 +1,97 @@
+/* Stili per Header */
+#header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  font-family: "CustomFont", Megihari;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili per Logo */
+#React-Logo {
+  display: flex;
+  flex-basis: 12.5%;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 6rem;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Stili per Menu Navigazione */
+#React-Nav-Menu {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5rem;
+
+    li {
+      font-size: 20px;
+      position: relative;
+      a {
+        text-decoration: none;
+        transition: color 0.3s ease;
+        color: #000;
+
+        &:hover {
+          color: #e3aad9;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background: #e3aad9;
+          transition: width 0.3s ease;
+        }
+
+        /*&:hover::after {
+                    width: 100%;
+                }*/
+      }
+    }
+  }
+}
+
+/* Stili per Menu Icona */
+#React-Nav-Icon {
+  display: flex;
+  flex-basis: 12.5%;
+  align-items: center;
+  font-weight: bold;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    li {
+      /*margin: 0 30px;
+            position: relative;*/
+      font-size: 20px;
+      a {
+        img {
+          width: 2rem;
+          aspect-ratio: 1 / 1;
+          transition: transform 200ms linear;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

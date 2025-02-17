@@ -1,0 +1,239 @@
+#intestazione-prodotti {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#intestazione-prodotti h2 {
+  font-size: 2.5em;
+  color: #551a8b;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+#products-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+#filters-container {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 5px 10px;
+}
+
+#filters-container h3 {
+  color: #551a8b;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Etichette dei filtri */
+#filters-container label {
+  font-size: 1.1em;
+  color: #551a8b;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Selezione dei filtri (Dropdown) */
+#filters-container select {
+  padding: 12px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #e3aad9;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+/* Cambia il colore del bordo del filtro quando è attivo */
+#filters-container select:focus {
+  border-color: #551a8b;
+}
+
+/* Bottone Filtra */
+#filters-container button {
+  background-color: #e3aad9;
+  color: white;
+  padding: 14px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  width: 70%;
+  align-self: center;
+}
+
+/* Hover sul bottone Filtra */
+#filters-container button:hover {
+  background-color: #551a8b;
+  transform: scale(1.05);
+}
+
+/* Bottone Annula (reset) */
+#reset-button {
+  background-color: #800020 !important;
+  color: white;
+  padding: 14px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  width: 70%;
+}
+
+/* Hover sul bottone Annula */
+#reset-button:hover {
+  background-color: #5a001f;
+  transform: scale(1.05);
+}
+
+#product-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  margin-top: 0;
+}
+
+.product-card {
+  border: 1px solid #e3aad9;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.product-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-card .product-name {
+  font-size: 1.3em;
+  color: #551a8b;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.product-card .product-price {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Bottone "Aggiungi al carrello" */
+.product-card .add-to-cart {
+  background-color: #e3aad9;
+  color: white;
+  padding: 14px 25px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 86%;
+  margin-bottom: 10px;
+}
+
+/* Hover sul bottone "Aggiungi al carrello" */
+.product-card .add-to-cart:hover {
+  transform: scale(1.05);
+}
+
+/* Bottone "Aggiungi alla wishlist" */
+.product-card .add-to-wishlist {
+  background-color: #551a8b;
+  color: white;
+  padding: 14px 25px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 86%;
+}
+
+/* Hover sul bottone "Aggiungi alla wishlist" */
+.product-card .add-to-wishlist:hover {
+  transform: scale(1.05);
+}
+/* Pagination container */
+#pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#pagination-container button {
+  background-color: #e3aad9;
+  color: white;
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#pagination-container button:hover {
+  background-color: #551a8b;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #products-container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  #filters-container {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  #product-list-container {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card button {
+    font-size: 1em;
+    padding: 12px 22px;
+  }
+
+  #pagination-container button {
+    font-size: 1em;
+    padding: 12px 22px;
+  }
+}

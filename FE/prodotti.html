@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/body.css">
+    <link rel="stylesheet" href="./styles/prodotti.css">
+
+    <!-- REACT -->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header id="header">
+        <div id="React-Logo"></div>
+        <nav id="React-Nav-Menu"></nav>
+        <nav id="React-Nav-Icon"></nav>
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+        
+        <div id="intestazione-prodotti">
+            <h2>Tutti i nostri prodotti</h2>
+        </div>
+
+        <div id="products-container">
+
+            <div id="filters-container" class="filters">
+                <label for="categoria">Filtra per categoria:</label>
+                <select id="categoria">
+                    <option value="Tutto">Tutte le categorie</option>
+                    <option value="Accessori">Accessori</option>
+                    <option value="Abbigliamento">Vestitini</option>
+                    <option value="Calzature">Scarpe</option>
+                </select>
+                <label for="materiale">Filtra per Materiale:</label>
+                <select id="materiale">
+                    <option value="Tutto">Tutti i materiali</option>
+                    <option value="Cotone">Cotone</option>
+                    <option value="Lana">Lana</option>
+                    <option value="Ciniglia">Ciniglia</option>
+                </select>
+                <label for="colore">Filtra per Colore:</label>
+                <select id="colore">
+                    <option value="Tutto">Tutti i colori</option>
+                    <option value="Rosso">Rosso</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Giallo">Giallo</option>
+                    <option value="Beige">Beige</option>
+                    <option value="Arancione">Arancione</option>
+                    <option value="Fantasia">Fantasia</option>
+                </select>
+
+                <button id="filter-button">Filtra</button>
+                <button id="reset-button">Annulla</button>
+
+            </div>
+        
+            <div id="product-list-container" class="product-list"></div>
+        
+        </div>
+
+    <div id="pagination-container">
+        <button id="prev-page">Precedente</button>
+        <button id="next-page">Successivo</button>
+    </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer id="footer">
+        <div class="top">
+            <div class="left-footer">
+                <h3>About Us</h3>
+                <div id="React-About"></div>
+                <h3>Follow Us</h3>
+                <nav id="React-Nav-Social"></nav>
+            </div>
+            <div class="right-footer">
+                <h3>Quick Links</h3>
+                <nav id="React-Nav-Site"></nav>
+            </div>
+        </div>
+        <div id="React-Footer-Lower"></div>
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script type="text/babel" src="./src/components/logo.js"></script>
+    <script type="text/babel" src="./src/components/nav-menu.js"></script>
+    <script type="text/babel" src="./src/components/nav-icon.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+    <script type="text/babel" src="./src/components/footer-lower.js"></script>
+    <script type="text/babel" src="./src/components/about.js"></script>
+    <script type="text/babel" src="./src/components/nav-site.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+    <script src="./scripts/products.js"></script>
+
+</body>
+
+</html>

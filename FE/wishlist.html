@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whishlist</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/body.css" />
+    <link rel="stylesheet" href="./styles/whishlist.css" />
+
+    <!-- REACT -->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <header id="header">
+      <div id="React-Logo"></div>
+      <nav id="React-Nav-Menu"></nav>
+      <nav id="React-Nav-Icon"></nav>
+    </header>
+
+    <!-- WHISHLIST -->
+
+    <h1 id="intestazione-prodotti">lista dei desideri</h1>
+    <div id="wishlist"></div>
+
+    <!-- FOOTER -->
+
+    <footer id="footer">
+      <div class="top">
+        <div class="left-footer">
+          <h3>About Us</h3>
+          <div id="React-About"></div>
+          <h3>Follow Us</h3>
+          <nav id="React-Nav-Social"></nav>
+        </div>
+        <div class="right-footer">
+          <h3>Quick Links</h3>
+          <nav id="React-Nav-Site"></nav>
+        </div>
+      </div>
+      <div id="React-Footer-Lower"></div>
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script type="text/babel" src="./src/components/logo.js"></script>
+    <script type="text/babel" src="./src/components/nav-menu.js"></script>
+    <script type="text/babel" src="./src/components/nav-icon.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+    <script type="text/babel" src="./src/components/footer-lower.js"></script>
+    <script type="text/babel" src="./src/components/about.js"></script>
+    <script type="text/babel" src="./src/components/nav-site.js"></script>
+    <script type="text/babel" src="./src/components/nav-social.js"></script>
+    <script src="./scripts/wishlist.js"></script>
+</body>
+
+</html>
