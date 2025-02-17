@@ -1,0 +1,11 @@
+{
+  "name": "master",
+  "version": "1.0.0",
+  "description": "Tesi Master in Web Development",
+  "scripts": {
+    "build": "cd ./FE/src && npm install && cd ../../BE && npm install",
+    "fe": "cd ./FE && npx serve",
+    "be": "cd ./BE && node app.js",
+    "app": "start npm run be & start npm run fe"
+  }
+}
