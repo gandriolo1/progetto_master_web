@@ -8,7 +8,6 @@ exports.checkout = (req, res) => {
   let numeroOrdine = `${idUtente}${nomeUtente.charAt(0)}${Date.now()}`;
   Carrello.create(idUtente, numeroOrdine, note)
     .then((carrello) => {
-      console.log(carrello.ID);
       let transporter = nodemailer.createTransport({
         service: process.env.MAIL_SERVICE,
         host: process.env.MAIL_HOST,
@@ -23,7 +22,7 @@ exports.checkout = (req, res) => {
         from: "langolodirita@gmail.com",
         to: emailUtente,
         subject: "[NO-REPLY] presa in carico ordine",
-        text: `Ciao ${nomeUtente},\nil tuo ordine n°${numeroOrdine} è stato preso in carico.\nVerrà consegnato in 3-5 giorni lavorativi all'indirizzo da te inserito.\nGrazie per aver supportato il nostro store.`,
+        text: `Ciao ${nomeUtente},\nil tuo ordine n°${numeroOrdine} è stato preso in carico.\nVerrà consegnato in 3-5 giorni lavorativi all'indirizzo: ${indirizzoUtente}.\nGrazie per aver supportato il nostro store.`
       };
       transporter.sendMail(payload, (error, info) => {
         if (error) {
