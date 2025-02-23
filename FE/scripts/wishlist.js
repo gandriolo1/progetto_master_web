@@ -17,8 +17,7 @@ async function loadWishlist() {
         const productDiv = document.createElement("div");
         productDiv.classList.add("product");
         productDiv.classList.add("product-whish");
-        productDiv.innerHTML = 
-          `
+        productDiv.innerHTML = `
             <img src="${product.IMMAGINE}" alt="${product.NOME}">
             <h3>${product.NOME}</h3>
             <p>Prezzo: €${product.PREZZO}</p>
@@ -38,10 +37,10 @@ document.addEventListener("click", async (e) => {
   if (e.target.tagName === "BUTTON" && e.target.hasAttribute("data-id")) {
     const productId = e.target.getAttribute("data-id");
     try {
-      const response = await fetch
-        (`http://localhost:4000/wishlist/rimuoviPreferito?id=${idUtente}&productId=${productId}`,
-          { method: "DELETE", }
-        );
+      const response = await fetch(
+        `http://localhost:4000/wishlist/rimuoviPreferito?id=${idUtente}&productId=${productId}`,
+        { method: "DELETE" }
+      );
       if (response.ok) {
         loadWishlist();
       } else {

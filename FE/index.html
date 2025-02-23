@@ -104,8 +104,8 @@
     <div id="newsletter-box">
         <h2>ISCRIVITI ALLA NOSTRA NEWSLETTER</h2>
         <p>Rimani aggiornato con le nostre ultime novità e offerte speciali.</p>
-        <form action="http://localhost:4000/users/iscrizione-newsletter" method="post">
-            <input type="email" name="email" placeholder="Inserisci la tua email" required>
+        <form id="newsletter-form">
+            <input type="email" name="email" id="email" placeholder="Inserisci la tua email" required>
             <button type="submit">Iscriviti</button>
         </form>
     </div>
@@ -138,6 +138,32 @@
     <script type="text/babel" src="./src/components/about.js"></script>
     <script type="text/babel" src="./src/components/nav-site.js"></script>
     <script type="text/babel" src="./src/components/nav-social.js"></script>
+
+    <script>
+        document.getElementById("newsletter-form").addEventListener("submit", async function(event) {
+            event.preventDefault();        
+            const email = document.getElementById("email").value;
+            const formData = { email };
+            try {
+                const response = await fetch("http://localhost:4000/newsletter/iscrizione-newsletter", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+                if (response.ok) {
+                    const message = await response.text();
+                    alert(message);
+                    document.getElementById("newsletter-form").reset();
+                } else {
+                    alert("Errore durante l'iscrizione. Riprova più tardi.");
+                }
+            } catch (error) {
+                alert("Si è verificato un errore. Controlla la connessione e riprova.");
+            }
+        });
+        </script>
 
     </body>
 </html>

@@ -47,22 +47,22 @@
                 </ul>
             </div>
 
-            <form action="#" method="POST" id="contact-form">
+            <form id="contact-form">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="messaggio">Messaggio:</label>
                     <textarea id="messaggio" name="messaggio" required></textarea>
                 </div>
-
+            
                 <button type="submit">Invia Messaggio</button>
             </form>
         </div>
@@ -96,6 +96,35 @@
 <script type="text/babel" src="./src/components/about.js"></script>
 <script type="text/babel" src="./src/components/nav-site.js"></script>
 <script type="text/babel" src="./src/components/nav-social.js"></script>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(event) {
+        event.preventDefault();    
+        const formData = {
+            nomeUtente: document.getElementById("nome").value,
+            emailUtente: document.getElementById("email").value,
+            messaggioUtente: document.getElementById("messaggio").value
+        };
+        try {
+            const response = await fetch("http://localhost:4000/contatti/request", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+            if (response.ok) {
+                const message = await response.text();
+                alert(message);
+                document.getElementById("contact-form").reset();
+            } else {
+                alert("Errore durante l'invio del messaggio. Riprova più tardi.");
+            }
+        } catch (error) {
+            alert("Si è verificato un errore. Controlla la connessione e riprova.");
+        }
+    });
+</script>
 
 </body>
 </html>
