@@ -1,11 +1,10 @@
-const db = require('../utils/db');
+const db = require("../utils/db");
 
 class Prodotti {
-
   // READ ALL
   static getAllProducts() {
     return new Promise((resolve, reject) => {
-      db.all('SELECT * FROM PRODOTTI', (err, rows) => {
+      db.all("SELECT * FROM PRODOTTI", (err, rows) => {
         if (err) {
           reject(err);
         } else {
@@ -13,8 +12,7 @@ class Prodotti {
         }
       });
     });
-  }  
-
+  }
 }
 
 module.exports = Prodotti;

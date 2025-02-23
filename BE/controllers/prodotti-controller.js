@@ -2,15 +2,15 @@ const Prodotti = require("../models/prodotti-model.js");
 
 exports.getAll = (req, res) => {
   Prodotti.getAllProducts()
-    .then(rows => {
+    .then((rows) => {
       res.status(200).json(
-        rows.map(row => ({
+        rows.map((row) => ({
           ...row,
-          IMMAGINE: `http://localhost:4000/file/${row.IMMAGINE}`
+          IMMAGINE: `http://localhost:4000/file/${row.IMMAGINE}`,
         }))
       );
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).json({ error: err.message });
     });
 };
